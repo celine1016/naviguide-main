@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wayfarer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/main.css" />
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">W</div>
+        <span class="brand-name">Wayfarer</span>
+      </div>
+      <nav class="nav">
+        <button class="nav-item active" data-tab="today">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.2"/><path d="M8 5v3.5l2 1.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Today
+        </button>
+        <button class="nav-item" data-tab="log">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2.5" y="2.5" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M5 8h6M8 5v6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Log Trip
+        </button>
+        <button class="nav-item" data-tab="habits">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 12l3.5-4 3 2.5L12 5l2 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Habits
+        </button>
+        <button class="nav-item" data-tab="discover">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.2"/><path d="M10.5 5.5l-2 4.5-4.5 2 2-4.5 4.5-2z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+          Discover
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="api-status" id="api-status">
+          <span class="status-dot"></span>
+          <span class="status-text">AI ready</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="tab-pane active" id="tab-today"></div>
+      <div class="tab-pane" id="tab-log"></div>
+      <div class="tab-pane" id="tab-habits"></div>
+      <div class="tab-pane" id="tab-discover"></div>
+    </main>
+  </div>
+
+  <script src="src/data/store.js"></script>
+  <script src="src/components/today.js"></script>
+  <script src="src/components/log.js"></script>
+  <script src="src/components/habits.js"></script>
+  <script src="src/components/discover.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
